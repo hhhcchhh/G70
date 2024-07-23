@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/swipeMenu_content"
+    android:background="@drawable/layout_normal_single_setting_corner_20">
+
+    <!--展示内容-->
+    <RelativeLayout
+        android:id="@+id/adapter_user_manage_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           >
+            <!--复选框-->
+            <LinearLayout
+                android:id="@+id/target_check_box_layout"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="20dp"
+                android:layout_height="20dp">
+                <CheckBox
+                    android:id="@+id/target_check_box"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:background="@drawable/chk_btn"/>
+            </LinearLayout>
+            <!--具体内容-->
+            <LinearLayout
+                android:id="@+id/user_title_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--用户名-->
+                <LinearLayout
+                    android:id="@+id/user_name_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="@string/user_name_"
+                        android:textColor="@color/dialog_title_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/adapter_user_manage_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="张三"
+                        android:textColor="@color/dialog_title_text_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--描述-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/bgd_color_system_title_FFFFFF">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/user_desc_"
+                        android:textColor="@color/dialog_title_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/adapter_user_manage_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="这是一个登录用户描述"
+                        android:textColor="#ff222222"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--修改和改密按钮-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="18dp">
+                    <!--修改描述-->
+                    <RelativeLayout
+                        android:id="@+id/adapter_user_manage_change_desc"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_adapter_user">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/motify_desc"
+                            android:textColor="@color/button_bg_color_confirm"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                    <!--修改密码-->
+                    <RelativeLayout
+                        android:id="@+id/adapter_user_manage_change_password"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_adapter_user"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/motify_pwd"
+                            android:textColor="@color/button_bg_color_confirm"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--删除按钮-->
+    <TextView
+        android:id="@+id/adapter_user_manage_delete_user_btn"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/adapter_user_manage_content"
+        android:background="@drawable/selector_user_delete"
+        android:gravity="center"
+        android:text="@string/manage_item_delete"
+        android:textColor="@color/bgd_color_system_title_FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</LinearLayout>

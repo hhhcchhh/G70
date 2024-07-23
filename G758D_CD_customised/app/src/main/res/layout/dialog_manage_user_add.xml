@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bgd_shape">
+
+    <RelativeLayout
+        android:id="@+id/manage_user_info_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/manage_user_dialog_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <TextView
+                android:id="@+id/manage_user_dialog_title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/add_user"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                 >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manage_user_info_condition"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/manage_user_dialog_title_layout" >
+
+            <TextView
+                android:id="@+id/manage_user_info_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:text="@string/user_name"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/manage_user_info_name_text"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right|center"
+                android:hint="@string/manage_add_user_name_hint"
+                android:maxLength="10"
+                android:digits="@string/user_name_digit"
+                android:padding="10dp"
+                android:singleLine="true"
+                
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manage_user_description_condition"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/manage_user_info_condition" 
+            >
+
+            <TextView
+                android:id="@+id/manage_user_description_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:text="@string/desc"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/manage_user_description_edt"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="@string/manage_add_user_dec_hint"
+                android:gravity="right|center"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manage_user_old_password_condition"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/manage_user_description_condition"
+             >
+
+            <TextView
+                android:id="@+id/manage_user_old_password_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:text="@string/user_pwd"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/manage_user_old_password_edt"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right|center"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:digits="@string/user_name_digit"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:hint="@string/manage_add_user_password_hint" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/manage_user_new_password_condition"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@+id/manage_user_old_password_condition" >
+
+            <TextView
+                android:id="@+id/manage_user_new_password_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:text="@string/change_user_new_password_confirm"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/manage_user_new_password_edt"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right|center"
+                android:hint="@string/change_user_new_password_confirm_hint"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:digits="@string/user_name_digit"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        
+        <RelativeLayout 
+            android:layout_above="@+id/manage_user_dialog_fragment_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dialog_interval_line"
+            ></RelativeLayout>
+        <LinearLayout
+            android:id="@+id/manage_user_dialog_fragment_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/manage_user_new_password_condition"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/manage_user_dialog_fragment_btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_dialog_down_left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/cancel"
+                    android:textColor="@color/button_text_color_cancel"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/dialog_interval_line" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/manage_user_dialog_fragment_btn_positive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_dialog_down_right" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/confirm"
+                    android:textColor="@color/text_color_main_636dFF"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

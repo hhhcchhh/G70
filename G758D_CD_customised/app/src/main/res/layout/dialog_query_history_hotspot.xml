@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/query_zhenma_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <!--头部-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="10dp">
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/query_zhenma_title_back_layout"-->
+<!--                    android:layout_width="30dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="15dp"-->
+<!--                    android:visibility="gone">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="9dp"-->
+<!--                        android:layout_height="17dp"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:background="@drawable/back_icon" />-->
+<!--                </RelativeLayout>-->
+
+                <TextView
+                    android:id="@+id/query_zhenma_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/query_zhenma"
+                    android:textColor="@color/dialog_title_text_color"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/choose_nr_sp_power_spinner_sort"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/spinner_background_10"
+                    android:dropDownWidth="100dp"
+                    android:entries="@array/device_more_power_level_nr"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    >
+
+                </Spinner>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bgd_light_new_2">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/query_hotspot_query_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--查询条件-侦码+伴随-->
+            <LinearLayout
+                android:id="@+id/query_condition_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <!--开始时间-->
+                    <TextView
+                        android:id="@+id/sms_query_condition_time_bg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2016-04-11 17:36:00" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/query_time_icon"></ImageView>
+                    <!--结束时间-->
+                    <TextView
+                        android:id="@+id/sms_query_condition_time_end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="2016-04-11 18:36:00" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/line_on_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dialog_interval_line2"></RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal">
+                    <!--IMSI IMEI-->
+                    <LinearLayout
+                        android:id="@+id/sms_query_condition_layout11"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        >
+
+                        <EditText
+                            android:id="@+id/sms_query_condition_imsi_imei"
+                            style="@style/choose_target_from_db_item_style"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="@string/imsi_imei"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                           />
+
+
+                        <ImageView
+                            android:id="@+id/sms_query_condition_target"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@mipmap/add_target_from_db_img"
+                            android:layout_marginEnd="15dp"
+                            />
+
+                        <TextView
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/dialog_text_color" />
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/hotspot_query_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/query_hotspot_btn_query_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/query"
+                            android:textColor="@color/main_text_color2"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/dialog_text_color"></TextView>
+
+                    <RelativeLayout
+                        android:id="@+id/hotspot_export_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="0.5dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/query_hotspot_btn_query_bg">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/export"
+                            android:textColor="@color/main_text_color2"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--查询条件-碰撞-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/query_crash_condition_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/bgd_shape"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <ListView-->
+<!--                    android:id="@+id/query_crash_time_list_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_marginTop="1dp"-->
+<!--                    android:layout_marginRight="10dp"-->
+<!--                    android:divider="@color/dialog_interval_line2"-->
+<!--                    android:dividerHeight="0.5dp"-->
+<!--                    android:scrollbarStyle="outsideOverlay"-->
+<!--                    android:scrollbarThumbVertical="@drawable/list_view_scroll_bgd"></ListView>-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/query_crash_list_line"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.5dp"-->
+<!--                    android:background="@color/dialog_interval_line2"></TextView>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/query_crash_add_time_layout"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_margin="2dp"-->
+<!--                    android:background="@drawable/query_hotspot_btn_query_bg">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:text="@string/add"-->
+<!--                        android:textColor="@color/text_color_main_636dFF"-->
+<!--                        android:textSize="15sp" />-->
+<!--                </RelativeLayout>-->
+
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.5dp"-->
+<!--                    android:background="@color/dialog_interval_line2"></RelativeLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/query_crash_layout"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginLeft="0.5dp"-->
+<!--                        android:layout_marginBottom="0.5dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/query_hotspot_btn_query_bg">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:text="@string/query"-->
+<!--                            android:textColor="@color/text_color_main_636dFF"-->
+<!--                            android:textSize="15sp" />-->
+<!--                    </RelativeLayout>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0.5dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="@color/dialog_interval_line2"></TextView>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/query_crash_export_layout"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginRight="0.5dp"-->
+<!--                        android:layout_marginBottom="0.5dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/query_hotspot_btn_query_bg">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:text="@string/export"-->
+<!--                            android:textColor="@color/text_color_main_636dFF"-->
+<!--                            android:textSize="15sp" />-->
+<!--                    </RelativeLayout>-->
+
+<!--                </LinearLayout>-->
+
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/query_crash_operate_time_layout"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="12dp"-->
+<!--                    android:background="@drawable/query_crash_operate_time_bgd">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/query_crash_operate_time_img"-->
+<!--                        android:layout_width="8dp"-->
+<!--                        android:layout_height="5dp"-->
+<!--                        android:layout_centerInParent="true" />-->
+<!--                </RelativeLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/list_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/query_hotspot_list_title_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+                <!--目标-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zhenma_query_target" />
+                <!--IMSI/IMEI/ESN/MAC-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/imsi_imei" />
+                <!--SP/归属地（类型）-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="频点/PCI" />
+                <!--时间-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_view_title_operator"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/query_hotspot_list_title_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone">
+                <!--目标-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="用户" />
+                <!--IMSI/IMEI/ESN/MAC-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="操作" />
+                <!--时间-->
+                <TextView
+                    style="@style/hotspot_top_title_text_select_style"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time" />
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/query_zhen_ma_load_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@null"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:scrollbarStyle="outsideOverlay" />
+
+
+            <!--            <com.sinovatio.raptor6.util.LoadListView-->
+            <!--                android:id="@+id/query_zhen_ma_load_list_view"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/query_hotspot_white_bg_with_corner"-->
+            <!--                android:divider="@null"-->
+            <!--                android:paddingLeft="5dp"-->
+            <!--                android:paddingRight="5dp"-->
+            <!--                android:scrollbarStyle="outsideOverlay"-->
+            <!--                android:scrollbarThumbVertical="@drawable/list_view_scroll_bgd"></com.sinovatio.raptor6.util.LoadListView>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/query_follow_list_view_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@drawable/query_hotspot_list_title_bg"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingLeft="5dp"-->
+<!--                android:paddingRight="5dp"-->
+<!--                android:visibility="gone">-->
+<!--                &lt;!&ndash;IMSI/IMEI/ESN/MAC&ndash;&gt;-->
+<!--                <TextView-->
+<!--                    style="@style/hotspot_top_title_text_select_style"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/zhenma_query_IMSI_IMEI" />-->
+
+<!--                &lt;!&ndash;SP/归属地（类型）&ndash;&gt;-->
+<!--                <TextView-->
+<!--                    style="@style/hotspot_top_title_text_select_style"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/zhenma_query_sp_locale" />-->
+<!--                &lt;!&ndash;时间&ndash;&gt;-->
+<!--                <TextView-->
+<!--                    android:id="@+id/query_follow_crash_title_text"-->
+<!--                    style="@style/hotspot_top_title_text_select_style"-->
+<!--                    android:layout_width="70dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/follow_count" />-->
+
+<!--            </LinearLayout>-->
+
+            <!--            <com.sinovatio.raptor6.util.LoadListView-->
+            <!--                android:id="@+id/query_follow_load_list_view"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/query_hotspot_white_bg_with_corner"-->
+            <!--                android:divider="@null"-->
+            <!--                android:paddingLeft="5dp"-->
+            <!--                android:paddingRight="5dp"-->
+            <!--                android:scrollbarStyle="outsideOverlay"-->
+            <!--                android:scrollbarThumbVertical="@drawable/list_view_scroll_bgd"-->
+            <!--                android:visibility="gone"></com.sinovatio.raptor6.util.LoadListView>-->
+
+            <!--            <com.sinovatio.raptor6.util.LoadListView-->
+            <!--                android:id="@+id/query_crash_load_list_view"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/query_hotspot_white_bg_with_corner"-->
+            <!--                android:divider="@null"-->
+            <!--                android:paddingLeft="5dp"-->
+            <!--                android:paddingRight="5dp"-->
+            <!--                android:scrollbarStyle="outsideOverlay"-->
+            <!--                android:scrollbarThumbVertical="@drawable/list_view_scroll_bgd"-->
+            <!--                android:visibility="gone"></com.sinovatio.raptor6.util.LoadListView>-->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.g73cs.h",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 30,
+      "versionName": "1.2.7",
+      "outputFile": "3G758_CX_v1.2.7_20240318_1151.apk"
+    }
+  ],
+  "elementType": "File"
+}

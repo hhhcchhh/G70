@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        minSdkVersion 21
+        versionCode 10 // 版本每修改一次，这里加 1
+        // 请同步修改NrSdk文件下的 versionName += ", SDK Vx.x.x"
+        versionName "1.6.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+task makeJar(type: Copy) {
+    delete('libs/NrSdk_dual_board_1.6.3.jar')
+    from('build/intermediates/packaged-classes/release/classes.jar') //这行表示要打包的文件的路径，根据下面的内容，其实是该路径下的classes.jar
+    into('libs/')  //这行表示打包完毕后包的生成路径，也就是生成的包存在哪
+    include('classes.jar')  //看到这行，如果你对分包有了解的话，你就可以看出来这行它只是将一些类打包了
+    rename ('classes.jar', 'NrSdk_dual_board_1.6.3.jar')
+}
+makeJar.dependsOn(build)
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation files('libs/ganymed-ssh2-build210.jar')
+    implementation files('libs/Zip4j1.3.3.jar')
+    implementation files('libs/commons-net-3.3.jar')
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ssb">
+        <item>128</item>
+        <item>255</item>
+    </string-array>
+    <string-array name="bandwidth_type">
+        <item>10</item>
+        <item>20</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="trace_cellId">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="gpio_lh">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="gpio_tdd_sw">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="band">
+        <item>N1</item>
+        <item>N28</item>
+        <item>N41</item>
+        <item>N78</item>
+        <item>N79</item>
+        <item>B1</item>
+        <item>B3</item>
+        <item>B5</item>
+        <item>B8</item>
+        <item>B34</item>
+        <item>B39</item>
+        <item>B40</item>
+        <item>B41</item>
+    </string-array>
+</resources>

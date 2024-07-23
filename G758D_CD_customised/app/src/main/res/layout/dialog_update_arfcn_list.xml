@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingVertical="4dp"
+    android:background="@drawable/shape_g_search"
+    android:layout_marginVertical="4dp"
+    android:orientation="horizontal"
+    >
+    <EditText
+        android:id="@+id/arfcn"
+        android:layout_width="54dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:background="@null"
+        android:maxLength="6"
+        android:inputType="number"
+        android:enabled="false"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textColor="@color/main_text_color3" />
+
+    <ImageView
+        android:id="@+id/btn_del"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@mipmap/button_delete" />
+</LinearLayout>

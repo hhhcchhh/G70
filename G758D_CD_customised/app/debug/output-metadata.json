@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.g758d.h.debug",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 30,
+      "versionName": "1.3.6",
+      "outputFile": "G758D_DW_CD_v1.3.6_20240513_1723_debug.apk"
+    }
+  ],
+  "elementType": "File"
+}

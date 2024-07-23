@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_app_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_version"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_app_version"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp"
+                    tools:text="V1.0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nr_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/board_version"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+
+            </LinearLayout>
+            <!--<LinearLayout
+                android:id="@+id/ll_lte_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="1dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备B信息"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more"/>
+
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/ll_sync_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/sync_mode"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_sync_model"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@mipmap/more"
+                    tools:text="@string/air" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_auto_freq_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="自动模式扫频次数"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_auto_freq_count"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@mipmap/more"
+                    tools:text="1" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_white_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/black_list"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_white_list"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_set_arfcn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/cfg_run_arfcn"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_set_arfcn"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <!--<LinearLayout
+                android:id="@+id/ll_arfcn_pci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="1dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="频点/PCI"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/more" />
+            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/ll_data_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/layout_selector_single_setting_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/data_out"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_user_manage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selector_single_setting_top"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="用户管理"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_op_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="读取黑匣子"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_operate_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="操作日志"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/layout_selector_single_setting_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="历史配置记录"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:drawableEndCompat="@mipmap/more" />
+            </LinearLayout>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备A温度"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_nr_temp"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    tools:text="0"
+                    android:textColor="#818181"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="1dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备A电压"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_nr_vol"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    tools:text="0"
+                    android:textColor="#818181"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="1dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备B温度"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_lte_temp"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    tools:text="0"
+                    android:textColor="#818181"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="1dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="设备B电压"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_lte_vol"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="10dp"
+                    tools:text="0"
+                    android:textColor="#818181"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        -->
+            <!--<LinearLayout
+                android:id="@+id/ll_business_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/layout_selector_single"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="业务模式"
+                    android:textColor="#333333"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_business_model"
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    tools:text="侦码"
+                    android:textColor="#818181"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@mipmap/more"/>
+            </LinearLayout>-->
+            <TextView
+                android:id="@+id/tv_reboot"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_selector_single_setting_corner_20"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/reboot"
+                android:textColor="#FD5C5C"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

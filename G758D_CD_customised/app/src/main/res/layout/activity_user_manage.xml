@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true"
+    >
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/user_manage_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/dialog_title_color"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--返回-->
+            <RelativeLayout
+                android:id="@+id/user_manage_btn_back"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/back_white" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/user_manage"
+                android:textColor="@color/title_text"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--全选，删除layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_manage_title_layout"
+        android:background="#1A000000"
+        >
+
+        <LinearLayout
+            android:id="@+id/choose_all_delete_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!--全选-->
+            <LinearLayout
+                android:id="@+id/target_check_box_layout_bak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/choose_all_layout"
+                    android:layout_width="106dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/target_choose_all"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/target_operate_choose_all"
+                        android:textColor="@color/text_color_main_636dFF"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="48dp"
+                android:background="@color/line_color"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/target_cancel_layout"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/target_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/text_color_main_636dFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="48dp"
+                android:background="@color/line_color"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/target_delete_layout"
+                android:layout_width="106dp"
+                android:layout_height="48dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/target_delete"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/delete_btn"
+                    android:textColor="@color/text_color_main_636dFF"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--内容-->
+        <LinearLayout
+            android:id="@+id/user_manage_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/choose_all_delete_layout"
+            android:layout_marginTop="5dp"
+            android:layout_margin="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_manage_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!--左下角按钮-->
+    <LinearLayout
+        android:id="@+id/ll_add_and_delete"
+        android:layout_width="44dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/user_btn_left"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!--添加-->
+        <ImageView
+            android:id="@+id/user_manage_add_user"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_sp_sdd_3" />
+        <!--删除-->
+        <ImageView
+            android:id="@+id/user_manage_delete_user"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_sp_delete_3" />
+    </LinearLayout>
+
+
+</RelativeLayout>

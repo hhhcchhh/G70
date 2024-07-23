@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_trace_catch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#FFD100"
+        app:tabSelectedTextColor="#FFD100"
+        app:tabTextAppearance="@style/tabLayout_topStyle"
+        app:tabTextColor="#CCFFFFFF" />
+
+    <com.simdo.g73cs.View.NestedScrollableHost
+        android:id="@+id/nestedScrollableHost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_trace_catch"
+        android:layout_weight="1">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_trace_catch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.simdo.g73cs.View.NestedScrollableHost>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_clear"-->
+    <!--        android:layout_width="28dp"-->
+    <!--        android:layout_height="28dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_do_btn"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/iv_sort"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_do_btn" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_sort"-->
+    <!--        android:layout_width="28dp"-->
+    <!--        android:layout_height="28dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_do_btn"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/tv_do_btn"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/iv_clear"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_do_btn" />-->
+
+
+    <!--    <Switch-->
+    <!--        android:id="@+id/switch_tx"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:switchMinWidth="20dp"-->
+    <!--        android:thumb="@drawable/switch_thumb"-->
+    <!--        android:track="@drawable/switch_track"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/iv_black_list"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/tv_do_btn"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/iv_black_list"-->
+    <!--        tools:ignore="UseSwitchCompatOrMaterialXml" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_tx"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/near"-->
+    <!--        android:textColor="@color/color_1c1c1c"-->
+    <!--        android:textSize="12sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/switch_tx"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/switch_tx"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/switch_tx" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_black_list"-->
+    <!--        android:layout_width="28dp"-->
+    <!--        android:layout_height="28dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/tv_do_btn"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/switch_tx"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/tv_do_btn" />-->
+
+</LinearLayout>
