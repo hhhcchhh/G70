@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="记录一：yyyy-MM-dd HH:mm:ss" />
+
+        <TextView
+            android:id="@+id/tv_arfcnList1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/tv_imsi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_arfcnList2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/tv_imsi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_arfcnList3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/tv_imsi3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_arfcnList4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+
+
+        <TextView
+            android:id="@+id/tv_imsi4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_arfcnList5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+        <TextView
+            android:id="@+id/tv_imsi5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_arfcnList6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+        <TextView
+            android:id="@+id/tv_imsi6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_arfcnList7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+        <TextView
+            android:id="@+id/tv_imsi7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_arfcnList8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:paddingTop="6dp"
+            android:text="频点："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_pci8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="pci："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+        <TextView
+            android:id="@+id/tv_imsi8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="6dp"
+            android:text="imsi："
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_del"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_bg_delete"
+        android:visibility="gone" />
+</LinearLayout>

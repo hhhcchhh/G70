@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+}
+
+boolean isB97502 = true
+android {
+    namespace 'com.simdo.g73cs'
+    compileSdk 33
+
+    defaultConfig {
+        // B97502: "com.simdo.g758d"   B97501:"com.simdo.g758c"
+        applicationId isB97502 ? "com.simdo.g73cz" : "com.simdo.g758c"
+        minSdk 21
+        targetSdk 33
+        versionCode 28
+        versionName "1.3.11"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def fileName
+                def time = new Date().format("yyyyMMdd_HHmm")
+                // 此处指定生成的apk文件名
+                // B97502: G758D_DW_ext_v   B97501: G758C_DW_ext_v
+                if (variant.buildType.name.equals('release')) {
+                    fileName = isB97502 ? "G73CZ_2+2_${defaultConfig.versionName}_${time}.apk" : "G73CZ${defaultConfig.versionName}_${time}.apk"
+                } else if (variant.buildType.name.equals('debug')) {
+                    fileName = isB97502 ? "G73CZ_2+2_${defaultConfig.versionName}_${time}_debug.apk" : "G73CZ${defaultConfig.versionName}_${time}_debug.apk"
+                }
+                outputFileName = fileName
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation files('libs\\NrSdk_dual_board_1.6.4.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation files('libs/NrSdk_dual_board_1.6.4.jar')
+    implementation files('libs/poi-3.12-android-a.jar')
+    implementation files('libs/poi-ooxml-schemas-3.12-20150511-a.jar')
+}
