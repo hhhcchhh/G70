@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.simdo.dw_multiple'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.simdo.dw_multiple_c733"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def fileName
+                def time = new Date().format("yyyyMMdd_HHmm")
+                // 此处指定生成的apk文件名
+//                fileName = "G73muliple_demo_v${defaultConfig.versionName}_${time}.apk"
+                fileName = "C733muliple_demo_v${defaultConfig.versionName}_${time}.apk"
+                outputFileName = fileName
+            }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.google.code.gson:gson:2.8.9' // json解析
+    //分布进度条
+    implementation 'com.github.pavlospt:circleview:1.3'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    //柱状图
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation files('libs/NrSdk_dual_board_1.1.0.jar')
+
+}
