@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--//这里是normal与press的xml文件-->
+    <item android:drawable="@drawable/layout_normal_bg" />
+
+    <!--//这里是背景图片-->
+    <item
+        android:drawable="@mipmap/chezai"
+        android:gravity="center_vertical|end"
+        android:right="5dp"
+        android:bottom="1dp">
+        <corners android:radius="45dp" />
+    </item>
+</layer-list>

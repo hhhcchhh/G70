@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="0.36"
+        android:orientation="vertical"
+        android:background="@mipmap/home_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/trace"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+            <LinearLayout
+                android:layout_width="0.0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/iv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_temperaturel"/>
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:text="00.00"
+                    android:textColor="@color/title_text"
+                    android:layout_marginStart="2dp"
+                    android:textSize="14sp" />
+                <com.DrawBatteryView
+                    android:id="@+id/battery_view"
+                    android:layout_width="24dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    />
+                <TextView
+                    android:id="@+id/battery"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/title_text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="100"
+                android:gravity="center"
+                android:textColor="@color/trace_value"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                android:background="@mipmap/home_bg_no_value"/>
+
+            <TextView
+                android:id="@+id/tv_2_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@mipmap/home_bg_no_value"
+                android:gravity="center"
+                android:text="100"
+                android:textColor="@color/trace_value"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                >-->
+
+            <Button
+                android:id="@+id/btn_trace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_background_main"
+                android:minWidth="55dp"
+                android:minHeight="35dp"
+                android:text="@string/trace"
+                android:textColor="@color/white" />
+
+
+
+<!--            </RelativeLayout>-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp">
+
+                <Button
+                    android:id="@+id/btn_txpwr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_background_main"
+                    android:minWidth="55dp"
+                    android:minHeight="40dp"
+                    android:text="@string/txpwr"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_arfcn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/btn_background_main"
+                    android:minWidth="55dp"
+                    android:minHeight="40dp"
+                    android:text="@string/freq_scan"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="clip_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_slide_left"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/home_icon_left" />
+
+            <Button
+                android:id="@+id/btn_slide_right"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:background="@mipmap/home_icon_right" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="@string/gps_state" />
+
+                <TextView
+                    android:id="@+id/tv_gps"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="#FDCD4E"
+                    tools:text="同步" />
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="@string/air_state"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_air_sync"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="#FDCD4E"
+                    tools:text="同步" />
+                <TextView
+                    android:id="@+id/tv_air_sync1"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:textSize="14sp"
+                    android:textColor="#FDCD4E"
+                    tools:text="同步" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:maxLines="1"
+
+                    android:text="IMSI:489990989098876"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:text="进度: 10 / 100" />
+
+                <TextView
+                    android:id="@+id/tv_imsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="侦码数:"
+
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/tv_imsi_cnt"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="1000"
+                    android:gravity="end"
+
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="0.66"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/bar_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#3576EC"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="2dp"
+                android:layout_gravity="center_horizontal"
+                app:tabTextAppearance="@style/MyTabLayout"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/gray"
+                android:orientation="horizontal">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_0"
+                    android:id="@+id/tab_cell_0"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_1"
+                    android:id="@+id/tab_cell_1"
+                    />
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="200dp"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart1"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+
+        <com.Wifi.WifiBarView
+            android:id="@+id/wifi_bar"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:visibility="gone" />
+        <include layout="@layout/list_arfcn_title" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/arfcn_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:descendantFocusability="blocksDescendants"
+            android:drawSelectorOnTop="false" />
+    </LinearLayout>
+</LinearLayout>

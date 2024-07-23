@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        tools:context=".UI.Fragment.BandFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="N1"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_n1"
+                android:layout_width="55dp"
+                android:switchMinWidth="55dp"
+                android:trackTintMode="multiply"
+                android:trackTint="@color/title_bar"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ed_timimgoffset"
+                android:layout_marginStart="10dp"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_offset_n1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3000000"
+                android:background="#F0F0F0"
+                android:textColor="#656565"
+                android:visibility="visible"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="N28"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_n28"
+                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:switchMinWidth="55dp"
+                android:trackTintMode="multiply"
+                android:trackTint="@color/title_bar"
+                android:layout_marginStart="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ed_timimgoffset"
+                android:layout_marginStart="10dp"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_offset_n28"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3000000"
+                android:background="#F0F0F0"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="N41"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_n41"
+                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:switchMinWidth="55dp"
+                android:trackTintMode="multiply"
+                android:trackTint="@color/title_bar"
+                android:layout_marginStart="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ed_timimgoffset"
+                android:layout_marginStart="10dp"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_offset_n41"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3000000"
+                android:background="#F0F0F0"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="N78"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_n78"
+                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:switchMinWidth="55dp"
+                android:trackTintMode="multiply"
+                android:trackTint="@color/title_bar"
+                android:layout_marginStart="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ed_timimgoffset"
+                android:layout_marginStart="10dp"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_offset_n78"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3000000"
+                android:background="#F0F0F0"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:text="N79"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_n79"
+                android:layout_height="wrap_content"
+                android:layout_width="55dp"
+                android:switchMinWidth="55dp"
+                android:trackTintMode="multiply"
+                android:trackTint="@color/title_bar"
+                android:layout_marginStart="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/ed_timimgoffset"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_offset_n79"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="3000000"
+                android:background="#F0F0F0"
+                android:textColor="#656565"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/start_scan"
+                android:layout_width="122dp"
+                android:layout_height="42dp"
+                android:textColor="@color/white"
+                android:text="@string/start_scan"
+                android:textSize="16sp"
+                android:background="@drawable/btn_bgl_1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

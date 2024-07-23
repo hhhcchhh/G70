@@ -1,0 +1,565 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/trace_cfg"
+        android:textColor="@color/title_text"
+        android:textSize="20sp">
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_arfcn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|start"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="10dp"
+                    >
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="16dp"
+                        android:background="@color/title_bar" />
+
+                    <TextView
+                        android:id="@+id/tv_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小区一"
+                        android:textColor="@color/black"
+                        android:layout_marginHorizontal="4dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小区二"
+                        android:textColor="@color/gray"
+                        android:layout_marginStart="4dp"
+                        android:paddingVertical="6dp"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cell_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_arfcn"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_arfcn"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textColor="@color/main_text_color"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分裂频点："
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_split_arfcn"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textColor="@color/main_text_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_pci"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_pci"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textColor="@color/main_text_color"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="IMSI"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ed_imsi"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textColor="@color/main_text_color" />
+                        <Button
+                            android:id="@+id/btn_imsi_add"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_add" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="14dp">
+
+                        <TextView
+                            android:id="@+id/tv_ue_maxpwr_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="UE最大发射功率："
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_ue_maxpwr_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:layout_toEndOf="@+id/tv_ue_maxpwr_first"
+                            android:visibility="visible"
+                            android:hint="10 ~ 50"
+                            />
+                        <ToggleButton
+                            android:id="@+id/tb_ue_maxpwr_first"
+                            android:layout_width="44dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:visibility="gone"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="14dp">
+
+                        <TextView
+                            android:id="@+id/tv_arfcn_change_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="频点轮询"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb_arfcn_change_first"
+                            android:layout_width="44dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:visibility="visible"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cell_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_arfcn"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_arfcn_second"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textColor="@color/main_text_color"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分裂频点："
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_split_arfcn_second"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:textColor="@color/main_text_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_pci"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/ed_pci_second"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textColor="@color/main_text_color"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="IMSI"
+                            android:textColor="@color/title_bar"
+                            android:textSize="14sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ed_imsi_second"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textColor="@color/main_text_color" />
+                        <Button
+                            android:id="@+id/btn_imsi_add_second"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_add" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="14dp">
+
+                        <TextView
+                            android:id="@+id/tv_ue_maxpwr_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="UE最大发射功率："
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+                        <EditText
+                            android:id="@+id/ed_ue_maxpwr_second"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="10 ~ 50"
+                            android:visibility="visible"
+                            android:layout_toEndOf="@+id/tv_ue_maxpwr_second"
+                            />
+                        <ToggleButton
+                            android:id="@+id/tb_ue_maxpwr_second"
+                            android:layout_width="44dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:visibility="gone"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="14dp">
+
+                        <TextView
+                            android:id="@+id/tv_arfcn_change_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="频点轮询"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="14sp" />
+
+                        <ToggleButton
+                            android:id="@+id/tb_arfcn_change_second"
+                            android:layout_width="44dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:visibility="visible"
+                            android:textOff=""
+                            android:textOn="" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="使能空口同步："
+                        android:textColor="@color/main_text_color"
+                        android:textSize="14sp" />
+
+                    <ToggleButton
+                        android:id="@+id/tb_enable_air"
+                        android:layout_width="44dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/tgl_on_ff"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:textOff=""
+                        android:textOn="" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_imsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/line_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/range_shape_color" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/black_list"
+                                android:textColor="@color/main_text_color"
+                                android:textSize="16sp" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/line_color" />
+
+                        <com.g50.UI.Bean.MyListview
+                            android:id="@+id/bl_imsi_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="#00000000"
+                            android:dividerHeight="0dip"
+                            android:drawSelectorOnTop="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_arfcn_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/list_arfcn_title" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/arfcn_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/line_color"
+                    android:drawSelectorOnTop="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:layout_marginBottom="15dp"
+        android:baselineAligned="false"
+        android:elevation="2dp"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bgl_big"
+            android:text="@string/confirm"
+            android:textColor="@color/btn_text"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bgl_big"
+            android:text="@string/cancel"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:textColor="@color/btn_text"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</LinearLayout>

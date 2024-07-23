@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff000000</color>
+    <color name="colorPrimaryDark">#ff000000</color>
+    <color name="colorAccent">#47a2ba</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="tblack">#333333</color>
+    <color name="red">#f00</color>
+    <color name="blue">#87bee0</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="yellow">#ffffc125</color>
+    <color name="green">#ff00ff00</color>
+    <color name="orange">#778ae5</color>
+    <color name="gray">#ff888888</color>
+    <color name="ltgray">#ffcccccc</color>
+    <color name="dkgray">#ff444444</color>
+    <color name="kkgray">#ffe0e0e0</color>
+    <color name="magenta">#ffff00ff</color>
+    <color name="title_bar">#313350</color>
+    <color name="title_text">#ffffffff</color>
+    <color name="title_loc_bar">#fff6f6f6</color>
+    <color name="title_loc_text">#ff333333</color>
+    <color name="btn_text">#ffffffff</color>
+    <color name="bg_color">#ffffff</color>
+    <color name="bg_color_sub">#f5f5f5</color>
+    <color name="main_text_color">#666666</color>
+    <color name="sub_text_color">#999999</color>
+    <color name="state_text_color">#6a62b3</color>
+    <color name="line_color">#e5e5e5</color>
+    <color name="hilight_bar">#e5e5e5</color>
+    <color name="range_shape_color">#6a62b3</color>
+    <color name="edit_solid">#f2f2f2</color>
+    <color name="edit_stroke_normal">#cccccc</color>
+    <color name="edit_stroke_focused">#FFCC33</color>
+    <color name="trace_value">#92E8B9</color>
+ </resources>

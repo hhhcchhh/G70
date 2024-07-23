@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:baselineAligned="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/title_bar"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@mipmap/back_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="配置频点"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_add_n1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/add_click" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:text="N1"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_n1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_add_n28"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/add_click" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:text="N28"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_n28"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_add_n41"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/add_click" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:text="N41"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_n41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_add_n78"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/add_click" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:text="N78"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_n78"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_add_n79"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/add_click" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:textSize="16sp"
+                    android:text="N79"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_n79"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
