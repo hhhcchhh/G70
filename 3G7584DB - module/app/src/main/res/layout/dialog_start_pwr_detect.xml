@@ -1,0 +1,551 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg_color"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/title_bar"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/start_pwr_detect"
+                    android:textColor="@color/title_text"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_arfcn"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_arfcn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_pci"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_pci"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="0~1007"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_period"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="1~512"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_par_cfg"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_par_cfg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:text="4"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_ul_slot_index1"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_ul_slot_index"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_ul_slot_index2"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_ul_slot_index2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:hint="0~19（不配请留空）"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_ul_rb_offset"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_ul_rb_offset"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_smooth_win_len"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_smooth_win_len"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:inputType="numberDecimal"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_prb_num"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_prb_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:digits="12345"
+                            android:hint="1~5"
+                            android:inputType="numberDecimal"
+                            android:maxLength="1"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ed_frame_type"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/ed_frame_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/bg_edittext"
+                            android:digits="0123456789"
+                            android:hint="0~9"
+                            android:inputType="numberDecimal"
+                            android:maxLength="1"
+                            android:padding="5dp"
+                            android:textColor="@color/main_text_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0.0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="是否计算上行频点"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <ToggleButton
+                            android:id="@+id/ul_switch"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/main_bg_color"
+                            android:button="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0.0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="主机TDD带宽20M"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <ToggleButton
+                            android:id="@+id/host_bandwidth_switch"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/main_bg_color"
+                            android:button="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0.0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="是否空口"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <ToggleButton
+                            android:id="@+id/air_switch"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/main_bg_color"
+                            android:button="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="0.0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="是否G758设备"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="16sp" />
+
+                        <ToggleButton
+                            android:id="@+id/rb_switch"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/main_bg_color"
+                            android:button="@drawable/tgl_on_ff"
+                            android:checked="false"
+                            android:focusable="false"
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="@string/enable_vehicle"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="18sp" />
+
+                    <ToggleButton
+                        android:id="@+id/tb_enable_vehicle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/main_bg_color"
+                        android:button="@drawable/tgl_on_ff"
+                        android:checked="true"
+                        android:focusable="false"
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/ed_band_width"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/sp_band_width"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:entries="@array/bandwidth_type"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0.0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/smooth_type"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/sp_smooth_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:entries="@array/smooth_type"
+                            android:spinnerMode="dropdown" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:baselineAligned="false"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/btn_bgl"
+                        android:text="@string/start_pwr_detect"
+                        android:textColor="@color/button_text_color_confirm"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/btn_bgl"
+                        android:text="@string/cancel"
+                        android:textColor="@color/button_text_color_confirm"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

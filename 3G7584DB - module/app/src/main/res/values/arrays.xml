@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ssb">
+        <item>128</item>
+        <item>255</item>
+    </string-array>
+    <string-array name="bandwidth_type">
+        <item>10</item>
+        <item>20</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="trace_cellId">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="gpio_lh">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="gpio_tdd_sw">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="band">
+        <item>N1</item>
+        <item>N28</item>
+        <item>N41</item>
+        <item>N78</item>
+        <item>N79</item>
+        <item>B1</item>
+        <item>B3</item>
+        <item>B5</item>
+        <item>B8</item>
+        <item>B34</item>
+        <item>B39</item>
+        <item>B40</item>
+        <item>B41</item>
+    </string-array>
+    <string-array name="smooth_type">
+        <item>平均</item>
+        <item>中值</item>
+        <item>iir</item>
+    </string-array>
+    <string-array name="gpio">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="doa">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pa_index">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="ss_type">
+        <item>GSM</item>
+        <item>UMTS</item>
+    </string-array>
+    <string-array name="gsm_type">
+        <item>GSM 850</item>
+        <item>P-GSM 900</item>
+        <item>E-GSM 900</item>
+        <item>R-GSM 900</item>
+        <item>ER-GSM 900</item>
+        <item>DCS 1800</item>
+        <item>PCS 1900</item>
+    </string-array>
+
+    <string-array name="umts_type">
+        <item>2100</item>
+        <item>1900 PCS</item>
+        <item>1800 DCS</item>
+        <item>AWS-1</item>
+        <item>850</item>
+        <item>850 Japan</item>
+        <item>2600</item>
+        <item>900 GSM</item>
+        <item>1800 Japan</item>
+        <item>AWS-1+</item>
+        <item>1500 Lower</item>
+        <item>700 a</item>
+        <item>700 c</item>
+        <item>700 PS</item>
+        <item>800 Japan</item>
+        <item>800 DD</item>
+        <item>1500 Upper</item>
+        <item>3500</item>
+        <item>1900+</item>
+        <item>850+</item>
+    </string-array>
+    <string-array name="host_type">
+        <item>G758 需要计算</item>
+        <item>G73 需要计算</item>
+        <item>G758 不需要计算</item>
+        <item>G73 不需要计算</item>
+    </string-array>
+    <string-array name="doa_type">
+        <item>单兵</item>
+        <item>测4向</item>
+        <item>测6向</item>
+    </string-array>
+</resources>

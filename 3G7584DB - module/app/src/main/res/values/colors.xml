@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="color_e65c5c">#e65c5c</color>
+    <color name="color_cc5252">#cc5252</color>
+    <color name="red">#FFFF0000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_16">#16FFFFFF</color>
+    <color name="blue">#87bee0</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="green">#ff00ff00</color>
+    <color name="orange">#778ae5</color>
+    <color name="title_bar">#47a2ba</color>
+    <color name="title_text">#ffffffff</color>
+    <color name="state_text_color">#47a2ba</color>
+
+    <!--    G758D_CD-->
+    <!--    启动页-->
+    <color name="start_navigationBar_color">#1CA9DC</color>
+    <color name="start_statusBar_color">#514EFE</color>
+    <!--    登录界面-->
+    <color name="login_bg_color">#1CA9DC</color>
+    <color name="login_status_bar_color">#FF00E5CA</color>
+    <color name="login_navigationBar_color">#0000E5CA</color>
+    <!--    主颜色-->
+    <color name="main_color">#000000</color>
+    <color name="main_bg_color">#F5F5F5</color>
+    <color name="main_title_color">#000000</color>
+    <color name="main_text_color">#979797</color>
+    <color name="main_text_color2">#FF00E4C9</color>
+    <color name="main_text_color3">#000000</color>
+    <color name="main_line_color">#e5e5e5</color>
+    <color name="main_status_bar_color">#FF18D6CA</color>
+    <color name="main_navigation_bar_color">#FF3AC5E3</color>
+    <!--    侧边颜色-->
+    <color name="left_title_color">#000000</color>
+    <color name="left_text_color">#FF666666</color>
+    <!--    水滴颜色-->
+    <color name="main_control_activated_color">#FF00E5CA</color>
+    <!--    顶部navigation-->
+    <color name="top_tab_color">#1CA9DC</color>
+    <!--    底部navigation-->
+    <color name="bottom_tab_color">#FFFFFF</color>
+    <!--    dialog颜色-->
+        <color name="dialog_title_bg_color">#ffffff</color>
+    <color name="dialog_title_text_color">#333333</color>
+    <color name="dialog_text_color">#333333</color>
+    <color name="dialog_bg_color">#FFFFFF</color>
+    <color name="dialog_navigation_bar_color">#FF00E5CA</color>
+    <!--    按钮颜色-->
+    <color name="button_bg_color_confirm">#FF00E5CA</color>
+    <color name="button_bg_color_cancel">#cc5252</color>
+    <color name="button_bg_color_cancel2">#e65c5c</color>
+    <color name="button_text_color_confirm">#FFFFFF</color>
+    <color name="button_text_color_confirm_2">#FF00E5CA</color>
+    <color name="button_text_color_cancel">#000000</color>
+    <!--    switch开关颜色-->
+    <color name="switch_open_color">#FF00E5CA</color>
+    <color name="switch_close_color">#cccccc</color>
+    <color name="switch_close_color2">#ffffff</color>
+    <!--    柱状图颜色-->
+    <color name="bar_chart_color">#979797</color>
+    <!--    选择框颜色-->
+    <color name="checkbox_checked">#FF00E5CA</color>
+    <color name="checkbox_unchecked">#FFffffff</color>
+
+    <color name="color_1a1a1a">#1a1a1a</color>
+    <color name="color_212121">#212121</color>
+    <color name="color_1c1c1c">#1c1c1c</color>
+    <color name="color_CCCCCC">#cccccc</color>
+    <color name="color_b6b6b6">#b6b6b6</color>
+    <color name="color_EDEDED">#EDEDED</color>
+    <color name="color_f0f0f0">#f0f0f0</color>
+    <color name="color_f8f8f8">#f8f8f8</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_47a2ba">#47a2ba</color>
+
+
+
+</resources>

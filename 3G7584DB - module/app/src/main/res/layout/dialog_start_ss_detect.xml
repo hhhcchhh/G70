@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_black_cfg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/start_ss_detect"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="类型"
+        app:layout_constraintTop_toBottomOf="@+id/tv_black_cfg_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/sp_type"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/ss_type"
+        android:spinnerMode="dropdown"
+        app:layout_constraintTop_toTopOf="@+id/tv_type"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_type"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_band"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Band"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/ed_band"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="5dp"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_band"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_band"
+        app:layout_constraintStart_toEndOf="@+id/tv_dl_arfcn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_dl_arfcn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="下行频点"
+        app:layout_constraintTop_toBottomOf="@+id/tv_band"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/ed_dl_arfcn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="5dp"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_dl_arfcn"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dl_arfcn"
+        app:layout_constraintStart_toEndOf="@+id/tv_dl_arfcn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_ul_arfcn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="上行频点"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dl_arfcn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/ed_ul_arfcn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_ul_arfcn"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_ul_arfcn"
+        app:layout_constraintStart_toEndOf="@+id/tv_ul_arfcn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_sched_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="调度周期"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ul_arfcn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/ed_sched_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/bg_edittext"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="5dp"
+        android:hint="1 - 512"
+        android:textColor="@color/main_text_color"
+        app:layout_constraintTop_toTopOf="@+id/tv_sched_mode"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sched_mode"
+        app:layout_constraintStart_toEndOf="@+id/tv_sched_mode"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btn_bgl"
+        android:text="@string/start_ss_detect"
+        android:textColor="@color/button_text_color_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sched_mode"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/btn_bgl"
+        android:text="@string/cancel"
+        android:textColor="@color/button_text_color_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start"
+        android:textSize="18sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
