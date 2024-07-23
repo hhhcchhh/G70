@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="style_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="full_style_dialog" parent="android:style/Theme.Dialog">
+
+    </style>
+
+    <style name="ThemeProgressDialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:indeterminateTint">@color/main_color</item>
+    </style>
+
+    <style name="MainCheckBoxTheme">
+        <item name="colorAccent">@color/main_color</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_EDEDED</item><!--未选中颜色-->
+    </style>
+
+    <style name="AutoCheckBoxTheme">
+        <item name="colorAccent">@color/main_color</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_EDEDED</item><!--未选中颜色-->
+    </style>
+
+    <style name="ListCheckBoxTheme">
+        <item name="colorAccent">@color/color_1a1a1a</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_EDEDED</item><!--未选中颜色-->
+    </style>
+
+    <style name="HardCheckBoxTheme">
+        <item name="colorAccent">@color/color_47a2ba</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_EDEDED</item><!--未选中颜色-->
+    </style>
+
+    <style name="MainLoginCheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/main_color</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_14000000</item><!--未选中颜色-->
+    </style>
+
+    <style name="MainRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/color_CCCCCC</item>
+        <item name="colorControlActivated">@color/main_color</item>
+    </style>
+
+    <style name="TextUnderImageStyle">
+        <item name="android:textColor">@color/color_1a1a1a</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="TextLeftStyle">
+        <item name="android:textColor">@color/color_1a1a1a</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextRightStyle">
+        <item name="android:textColor">@color/color_212121</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="tabLayout_bottomStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="tabLayout_topStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AnimationUpDown">
+        <!-- PopupWindow左右弹出的效果-->
+        <item name="android:windowEnterAnimation">@anim/out_toptobottom</item>
+        <item name="android:windowExitAnimation">@anim/in_bottomtotop</item>
+    </style>
+</resources>

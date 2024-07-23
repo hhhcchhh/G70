@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f8f8f8"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg_color"
+        android:gravity="center_horizontal"
+        android:paddingVertical="10dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dev_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_page_title"
+        app:layout_constraintBottom_toBottomOf="@+id/main_page_title"
+        android:layout_marginStart="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_setting"
+        android:paddingEnd="10dp"
+        android:paddingStart="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_page_title"
+        app:layout_constraintBottom_toBottomOf="@+id/main_page_title"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_f8f8f8"
+        app:layout_constraintBottom_toTopOf="@+id/tab_layout"
+        app:layout_constraintTop_toBottomOf="@+id/main_page_title" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/main_color"
+        app:tabTextAppearance="@style/tabLayout_bottomStyle"
+        app:tabTextColor="@color/color_1c1c1c" />
+
+    <TextView
+        android:id="@+id/tv_do_btn"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/btn_bg_start"
+        android:gravity="center"
+        android:text="@string/open"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tab_layout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_gain_btn"
+        android:layout_width="82dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bg_gain"
+        android:tag="standard"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_do_btn"
+        app:layout_constraintBottom_toTopOf="@+id/tv_do_btn"
+        app:layout_constraintEnd_toEndOf="@+id/tv_do_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

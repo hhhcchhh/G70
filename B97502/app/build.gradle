@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+boolean isB97502 = true
+android {
+    namespace 'com.simdo.g73cs'
+    compileSdk 33
+
+    defaultConfig {
+        // B97502: "com.simdo.v4.b97502"   B97501:"com.simdo.v4.b97501"
+        applicationId isB97502 ? "com.simdo.v4.b97502" : "com.simdo.v4.b97501"
+        minSdk 21
+        targetSdk 33
+        versionCode 73
+        versionName "4.6.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def fileName
+                def time = new   Date().format("yyyyMMdd_HHmm")
+                // 此处指定生成的apk文件名
+                // B97502: B97502_DW_ext_v   B97501: B97501_DW_ext_v
+                fileName = isB97502 ? "B97502_DW_ext_v${defaultConfig.versionName}_${time}.apk" : "B97501_DW_ext_v${defaultConfig.versionName}_${time}.apk"
+                outputFileName = fileName
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation files('libs\\NrSdk_dual_board_1.9.0.jar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

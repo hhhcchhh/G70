@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingVertical="6dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/under_line"
+    android:orientation="horizontal"
+    tools:ignore="RtlSymmetry">
+
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MainCheckBoxTheme" />
+
+    <!--<TextView
+        android:id="@+id/tv_rsrp"
+        android:layout_width="0dp"
+        android:layout_weight="0.4"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="100"
+        android:textColor="@color/main_color"
+        android:textSize="20sp"/>-->
+
+    <TextView
+        android:id="@+id/tv_imsi"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="@string/IMSI"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_ips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="11:18:20"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</LinearLayout>

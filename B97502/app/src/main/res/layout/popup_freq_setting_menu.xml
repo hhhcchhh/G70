@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_arfcn_real"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="@string/arfcn_real"
+        android:background="@drawable/btn_bg_menu_item"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="1dp"
+        android:background="#ffebebeb" />
+
+    <TextView
+        android:id="@+id/tv_arfcn_file"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/btn_bg_menu_item"
+        android:text="@string/arfcn_file"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="1dp"
+        android:background="#ffebebeb" />
+
+    <TextView
+        android:id="@+id/tv_band_real"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/btn_bg_menu_item"
+        android:text="@string/band_real"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="1dp"
+        android:background="#ffebebeb" />
+
+    <TextView
+        android:id="@+id/tv_band_file"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/btn_bg_menu_item"
+        android:text="@string/band_file"
+        android:textSize="16sp" />
+
+</LinearLayout>

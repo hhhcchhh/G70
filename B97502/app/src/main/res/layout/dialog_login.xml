@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_login_bg_color"
+    android:paddingVertical="50dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login_logo"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.simdo.g73cs.View.ConnectProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_connect_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/connecting"
+        android:textColor="@color/main_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+    <EditText
+        android:id="@+id/ed_login_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:drawableStart="@mipmap/user_icon"
+        android:drawablePadding="10dp"
+        android:textColor="@color/color_1a1a1a"
+        android:textColorHint="@color/color_b6b6b6"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_connect_state" />
+
+    <View
+        android:id="@id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_0C000000"
+        app:layout_constraintTop_toBottomOf="@+id/ed_login_name" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <EditText
+            android:id="@+id/ed_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableStart="@mipmap/password_icon"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:textColor="@color/color_1a1a1a"
+            android:textColorHint="@color/color_b6b6b6"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_login_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ed_login_password"
+            android:layout_alignBottom="@+id/ed_login_password"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/unsee_icon"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <View
+        android:id="@id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_0C000000"
+        app:layout_constraintTop_toBottomOf="@+id/rl1" />
+
+    <TextView
+        android:id="@+id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:text="@string/connect_help"
+        android:textColor="@color/main_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4"/>
+
+    <CheckBox
+        android:id="@+id/cb_into_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/offline_mode"
+        android:textColor="@color/main_color"
+        android:textSize="14sp"
+        android:theme="@style/MainLoginCheckBoxTheme"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bg_login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_into_wait" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
