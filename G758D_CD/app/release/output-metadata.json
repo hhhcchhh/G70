@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.g73cs.h",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 30,
+      "versionName": "1.5.2",
+      "outputFile": "C97505_v1.5.2_20240701_0917.apk"
+    }
+  ],
+  "elementType": "File"
+}

@@ -1,0 +1,72 @@
+<resources>
+    <style name="style_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+
+    <style name="ThemeProgressDialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:indeterminateTint">@color/main_color</item>
+    </style>
+
+    <style name="MainCheckBoxTheme">
+        <item name="colorAccent">#FFD100</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/color_EDEDED</item><!--未选中颜色-->
+    </style>
+
+    <style name="MainLoginCheckBoxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/white</item><!--选中颜色-->
+        <item name="colorControlNormal">@color/white</item><!--未选中颜色-->
+    </style>
+
+    <style name="MainRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/color_CCCCCC</item>
+        <item name="colorControlActivated">@color/button_bg_color_confirm</item>
+    </style>
+
+    <style name="TextUnderImageStyle">
+        <item name="android:textColor">@color/color_1a1a1a</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="TextLeftStyle">
+        <item name="android:textColor">@color/color_1a1a1a</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextRightStyle">
+        <item name="android:textColor">@color/color_212121</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="tabLayout_bottomStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="tabLayout_topStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TransparentTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AnimationUpDown">
+        <!-- PopupWindow左右弹出的效果-->
+        <item name="android:windowEnterAnimation">@anim/out_toptobottom</item>
+        <item name="android:windowExitAnimation">@anim/in_bottomtotop</item>
+    </style>
+    <style name="BaseDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

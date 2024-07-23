@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.g758d.h.d",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 30,
+      "versionName": "1.5.10",
+      "outputFile": "Raptor_v1.5.10_20240719_1109_d.apk"
+    }
+  ],
+  "elementType": "File"
+}

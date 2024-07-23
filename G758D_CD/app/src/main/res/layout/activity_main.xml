@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:background="@mipmap/home_big_background"
+        >
+
+        <TextView
+            android:id="@+id/main_page_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/trace"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_state_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态测试"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/main_page_title"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:background="@mipmap/icon_ready_n"
+            app:layout_constraintBottom_toBottomOf="@+id/main_page_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="未就绪"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_state"
+            app:layout_constraintStart_toEndOf="@+id/iv_state"
+            app:layout_constraintTop_toTopOf="@+id/iv_state" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/group_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingVertical="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/view_pager"
+            app:layout_constraintTop_toBottomOf="@+id/main_page_title">
+
+            <ImageView
+                android:id="@+id/iv_cell_1_nr"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_cell_2_nr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cell_1_nr"
+                style="@style/TextUnderImageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:layout_constraintEnd_toEndOf="@+id/iv_cell_1_nr"
+                app:layout_constraintStart_toStartOf="@+id/iv_cell_1_nr"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cell_1_nr" />
+
+            <ImageView
+                android:id="@+id/iv_cell_2_nr"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_cell_1_lte"
+                app:layout_constraintStart_toEndOf="@+id/iv_cell_1_nr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cell_2_nr"
+                style="@style/TextUnderImageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                app:layout_constraintEnd_toEndOf="@+id/iv_cell_2_nr"
+                app:layout_constraintStart_toStartOf="@+id/iv_cell_2_nr"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cell_2_nr" />
+
+            <ImageView
+                android:id="@+id/iv_cell_1_lte"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_cell_2_lte"
+                app:layout_constraintStart_toEndOf="@+id/iv_cell_2_nr"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cell_1_lte"
+                style="@style/TextUnderImageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                app:layout_constraintEnd_toEndOf="@+id/iv_cell_1_lte"
+                app:layout_constraintStart_toStartOf="@+id/iv_cell_1_lte"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cell_1_lte" />
+
+            <ImageView
+                android:id="@+id/iv_cell_2_lte"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_cell_1_lte"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cell_2_lte"
+                style="@style/TextUnderImageStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                app:layout_constraintEnd_toEndOf="@+id/iv_cell_2_lte"
+                app:layout_constraintStart_toStartOf="@+id/iv_cell_2_lte"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cell_2_lte" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tab_layout"
+            app:layout_constraintTop_toBottomOf="@+id/group_status" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:background="@color/bottom_tab_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager"
+            app:tabSelectedTextColor="@color/main_text_color2"
+            app:tabTextColor="@color/main_text_color"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorColor="#ffffff"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/left"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:background="@android:color/white"
+        android:focusable="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6255F2"
+            >
+
+            <TextView
+                android:id="@+id/device_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:paddingBottom="10dp"
+                android:text="设备信息"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_device_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/device_info">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/icon_small_block_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_first_channel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_first_channel" />
+
+                    <TextView
+                        android:id="@+id/tv_first_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="通道一"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_first_channel_sync_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="同步："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_first_channel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_first_channel_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="失步"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_first_channel_sync_text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_first_channel_state_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="状态："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_first_channel_sync_text"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_first_channel_sync_text" />
+
+                    <TextView
+                        android:id="@+id/tv_first_channel_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未就绪"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_first_channel_state_text"
+                        app:layout_constraintTop_toTopOf="@+id/tv_first_channel_state_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_second"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/icon_small_block_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_second_channel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_second_channel" />
+
+                    <TextView
+                        android:id="@+id/tv_second_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="通道二"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_second"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_second_channel_sync_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="同步："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_second_channel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_second_channel_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="失步"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_second_channel_sync_text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_second_channel_state_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="状态："
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+
+                        app:layout_constraintStart_toStartOf="@+id/tv_second_channel_sync_text"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_second_channel_sync_text" />
+
+                    <TextView
+                        android:id="@+id/tv_second_channel_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未就绪"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+
+                        app:layout_constraintStart_toEndOf="@+id/tv_second_channel_state_text"
+                        app:layout_constraintTop_toTopOf="@+id/tv_second_channel_state_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_third"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/icon_small_block_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_third_channel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_third_channel" />
+
+                    <TextView
+                        android:id="@+id/tv_third_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="通道三"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_third"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_third_channel_sync_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="同步："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_third_channel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_third_channel_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="失步"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_third_channel_sync_text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_third_channel_state_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="状态："
+
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_third_channel_sync_text"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_third_channel_sync_text" />
+
+                    <TextView
+                        android:id="@+id/tv_third_channel_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未就绪"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+
+                        app:layout_constraintStart_toEndOf="@+id/tv_third_channel_state_text"
+                        app:layout_constraintTop_toTopOf="@+id/tv_third_channel_state_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/imageView_forth"
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@mipmap/icon_small_block_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_forth_channel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_forth_channel" />
+
+                    <TextView
+                        android:id="@+id/tv_forth_channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="通道四"
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView_forth"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_forth_channel_sync_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:text="同步："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_forth_channel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_forth_channel_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="失步"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+
+                        app:layout_constraintStart_toEndOf="@+id/tv_forth_channel_sync_text"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_forth_channel_state_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="状态："
+                        android:textColor="@color/white"
+
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_forth_channel_sync_text"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_forth_channel_sync_text" />
+
+                    <TextView
+                        android:id="@+id/tv_forth_channel_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未就绪"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+
+                        app:layout_constraintStart_toEndOf="@+id/tv_forth_channel_state_text"
+                        app:layout_constraintTop_toTopOf="@+id/tv_forth_channel_state_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/device_tmp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:text="设备温度"
+                android:textColor="@color/white"
+
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_device_channel" />
+
+            <TextView
+                android:id="@+id/device_tmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                app:layout_constraintStart_toEndOf="@+id/device_tmp_text"
+                app:layout_constraintTop_toTopOf="@+id/device_tmp_text" />
+
+            <TextView
+                android:id="@+id/device_voltage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="设备电量"
+                android:textColor="@color/white"
+
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/device_tmp_text"
+                app:layout_constraintTop_toBottomOf="@+id/device_tmp_text" />
+
+            <TextView
+                android:id="@+id/device_voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:text="0.0"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                app:layout_constraintStart_toEndOf="@+id/device_voltage_text"
+                app:layout_constraintTop_toTopOf="@+id/device_voltage_text" />
+
+            <TextView
+                android:id="@+id/device_voltage_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=""
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/device_voltage"
+                app:layout_constraintStart_toEndOf="@+id/device_voltage"
+                app:layout_constraintTop_toTopOf="@+id/device_voltage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
