@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.g758fgk",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 25,
+      "versionName": "2.4.3",
+      "outputFile": "G758_FGK_ext_v2.4.3_20231019_1514.apk"
+    }
+  ],
+  "elementType": "File"
+}

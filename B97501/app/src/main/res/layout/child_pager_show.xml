@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/color_f8f8f8"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_rsrp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="66sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="场强"
+        android:textSize="20sp"
+        android:textColor="@color/color_212121"
+        app:layout_constraintEnd_toStartOf="@+id/tv_rsrp_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_rsrp_value"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_value"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageView
+        android:id="@+id/iv_tts"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@mipmap/sound_select_icon"
+        app:layout_constraintStart_toEndOf="@+id/tv_rsrp_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_rsrp_value"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_value"/>
+
+    <TextView
+        android:id="@+id/tv_up_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上号次数：55次"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/color_212121"
+        app:layout_constraintStart_toStartOf="@+id/tv_rsrp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_value"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rsrp_value"/>
+
+    <TextView
+        android:id="@+id/tv_up_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新时间：19:34:00"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/color_212121"
+        app:layout_constraintStart_toStartOf="@+id/tv_rsrp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_up_num"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rsrp_value"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/char_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_up_info"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rsrp_value"
+        app:layout_constraintStart_toStartOf="@+id/tv_rsrp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_up_time" />
+
+    <TextView
+        android:id="@+id/tv_up_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移动 4G 46011****0917"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/color_212121"
+        android:background="@drawable/btn_bg_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.application'
+}
+boolean isB97502 = false
+android {
+    namespace 'com.simdo.g73cs'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId isB97502 ? "com.simdo.v2.b97502fgk" : "com.simdo.v2.b97501fgk"
+        minSdk 21
+        targetSdk 33
+<<<<<<< .mine
+        versionCode 36
+        versionName "2.6.4.2"
+=======
+        versionCode 47
+        versionName "2.7.1"
+>>>>>>> .r5377
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            debuggable true
+            jniDebuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def fileName
+                def time = new   Date().format("yyyyMMdd_HHmm")
+                // 此处指定生成的apk文件名
+                fileName = isB97502 ? "B97502_FGK_ext_v${defaultConfig.versionName}_${time}.apk" : "B97501_FGK_ext_v${defaultConfig.versionName}_${time}.apk"
+                outputFileName = fileName
+            }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

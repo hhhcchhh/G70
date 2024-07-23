@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_status_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="授权时间"
+        android:textColor="@color/white"
+        android:textSize="20sp" >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/main_color"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="1、结束日期"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_edittext"
+        android:textColor="@color/color_1a1a1a" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="2、可用时长(小时)"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/ed_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:text="0"
+        android:background="@drawable/bg_edittext"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textColor="@color/color_1a1a1a" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:text="3、是否生效"
+        android:textColor="@color/color_1a1a1a"
+        android:textSize="18sp" />
+    <RadioGroup
+        android:id="@+id/rg_can"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+        <RadioButton
+            android:id="@+id/rb_can"
+            android:text="生效"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:text="不生效"
+            android:id="@+id/rb_not_can"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="说明：\n1、若当前日期超过结束日期\n2、若已使用时长超过可用时长\n生效状态下，若任一条件满足，则基带板被限制使用"
+        android:textColor="@color/color_b6b6b6"
+        android:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_ok"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/confirm_fix"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_cancel_2"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="@string/back"
+            android:textColor="@color/color_1c1c1c"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

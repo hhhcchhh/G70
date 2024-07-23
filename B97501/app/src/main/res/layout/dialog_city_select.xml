@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/title_city"
+        android:textColor="@color/color_f8f8f8"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_set_as_cur_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/set_as_cur_city"
+        android:textColor="@color/color_1c1c1c"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/color_f8f8f8" />
+
+    <TextView
+        android:id="@+id/tv_edit_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/edit_city"
+        android:textColor="@color/color_1c1c1c"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/color_f8f8f8" />
+
+    <TextView
+        android:id="@+id/tv_delete_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/delete_city"
+        android:textColor="@color/color_1c1c1c"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/color_f8f8f8" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/cancel"
+        android:textColor="@color/color_1c1c1c"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/color_f8f8f8"
+        android:layout_marginBottom="30dp"/>
+</LinearLayout>

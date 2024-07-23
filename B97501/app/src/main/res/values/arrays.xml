@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="report_ue_type">
+        <item>关闭Iphone识别</item>
+        <item>打开Iphone识别</item>
+        <item>仅搜寻Iphone</item>
+    </string-array>
+    <string-array name="server_type">
+        <item>sftp</item>
+        <item>ftp</item>
+    </string-array>
+</resources>

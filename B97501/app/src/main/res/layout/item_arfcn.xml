@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="14sp"
+    android:padding="10dp"
+    android:background="@drawable/under_line">
+
+    <CheckBox
+        android:id="@+id/cb_text"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:textSize="14sp"
+        android:textColor="@color/color_6190FF"
+        android:text="N1"
+        android:theme="@style/MainCheckBoxTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cb_text"
+        app:layout_constraintTop_toTopOf="@+id/cb_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

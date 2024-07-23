@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.simdo.v2.b97501fgk",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 36,
+      "versionName": "2.6.4.2",
+      "outputFile": "B97501_FGK_ext_v2.6.4.2_20231214_1211.apk"
+    }
+  ],
+  "elementType": "File"
+}

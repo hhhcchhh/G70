@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/color_f8f8f8"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <View
+            android:id="@+id/v_line_nr"
+            android:layout_width="4dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/main_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nr"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="5G定位"
+            app:layout_constraintBottom_toBottomOf="@+id/v_line_nr"
+            app:layout_constraintStart_toEndOf="@+id/v_line_nr"
+            app:layout_constraintTop_toTopOf="@+id/v_line_nr" />
+
+        <TextView
+            android:id="@+id/tv_zhu_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toStartOf="@+id/switch_nr"
+            android:text="柱状图"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_nr"
+            app:layout_constraintEnd_toStartOf="@+id/switch_nr"
+            app:layout_constraintTop_toTopOf="@+id/tv_nr" />
+
+        <Switch
+            android:id="@+id/switch_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_zhu_nr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_zhu_nr"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/tv_rsrp_nr_1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textColor="@color/main_color"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line_nr" />
+
+        <ImageView
+            android:id="@+id/iv_tts_cell_1_nr"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_nr_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_rsrp_nr_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_rsrp_nr_1" />
+
+        <TextView
+            android:id="@+id/tv_imsi_title_nr_1"
+            style="@style/TextLeftStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标:"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_nr_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_rsrp_nr_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_tts_cell_1_nr" />
+
+        <TextView
+            android:id="@+id/tv_imsi_nr_1"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="46000****0000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_nr_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_imsi_title_nr_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_nr_1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EDEDED"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_nr_1"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/char_nr_1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_nr_1"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_nr_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_rsrp_nr_1, tv_imsi_title_nr_1, tv_imsi_nr_1" />
+
+        <TextView
+            android:id="@+id/tv_rsrp_nr_2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textColor="@color/main_color"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/char_nr_1" />
+        <ImageView
+            android:id="@+id/iv_tts_cell_2_nr"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_nr_2"
+            app:layout_constraintStart_toEndOf="@+id/tv_rsrp_nr_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_nr_2" />
+        <TextView
+            android:id="@+id/tv_imsi_title_nr_2"
+            style="@style/TextLeftStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标:"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_nr_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_rsrp_nr_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_tts_cell_2_nr" />
+
+        <TextView
+            android:id="@+id/tv_imsi_nr_2"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="46000****0000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_nr_2"
+            app:layout_constraintStart_toEndOf="@+id/tv_imsi_title_nr_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_nr_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EDEDED"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_nr_2"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/char_nr_2"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_nr_2"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_nr_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_rsrp_nr_2, tv_imsi_title_nr_2, tv_imsi_nr_2" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_chart_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="char_nr_1, char_nr_2"/>
+
+        <View
+            android:id="@+id/v_line_lte"
+            android:layout_width="4dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/char_nr_2" />
+
+        <TextView
+            android:id="@+id/tv_lte"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="4G定位"
+            app:layout_constraintBottom_toBottomOf="@+id/v_line_lte"
+            app:layout_constraintStart_toEndOf="@+id/v_line_lte"
+            app:layout_constraintTop_toTopOf="@+id/v_line_lte" />
+
+        <TextView
+            android:id="@+id/tv_zhu_lte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toStartOf="@+id/switch_lte"
+            android:text="柱状图"
+            android:textColor="@color/main_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_lte"
+            app:layout_constraintEnd_toStartOf="@+id/switch_lte"
+            app:layout_constraintTop_toTopOf="@+id/tv_lte" />
+
+        <Switch
+            android:id="@+id/switch_lte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:switchMinWidth="20dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_zhu_lte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_zhu_lte"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/tv_rsrp_lte_1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textColor="@color/main_color"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_line_lte" />
+        <ImageView
+            android:id="@+id/iv_tts_cell_1_lte"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_lte_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_rsrp_lte_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_lte_1" />
+        <TextView
+            android:id="@+id/tv_imsi_title_lte_1"
+            style="@style/TextLeftStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标:"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_lte_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_rsrp_lte_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_tts_cell_1_lte" />
+
+        <TextView
+            android:id="@+id/tv_imsi_lte_1"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="46000****0000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_lte_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_imsi_title_lte_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_lte_1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EDEDED"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_lte_1"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/char_lte_1"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_lte_1"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_lte_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_rsrp_lte_1, tv_imsi_title_lte_1, tv_imsi_lte_1" />
+
+        <TextView
+            android:id="@+id/tv_rsrp_lte_2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textColor="@color/main_color"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/char_lte_1" />
+        <ImageView
+            android:id="@+id/iv_tts_cell_2_lte"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_lte_2"
+            app:layout_constraintStart_toEndOf="@+id/tv_rsrp_lte_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_lte_2" />
+        <TextView
+            android:id="@+id/tv_imsi_title_lte_2"
+            style="@style/TextLeftStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目标:"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_rsrp_lte_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_rsrp_lte_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_tts_cell_2_lte" />
+
+        <TextView
+            android:id="@+id/tv_imsi_lte_2"
+            style="@style/TextRightStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="46000****0000"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_imsi_title_lte_2"
+            app:layout_constraintStart_toEndOf="@+id/tv_imsi_title_lte_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_imsi_title_lte_2" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/char_lte_2"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_lte_2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EDEDED"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rsrp_lte_2"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_lte_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tv_rsrp_lte_2, tv_imsi_title_lte_2, tv_imsi_lte_2" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_chart_lte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="char_lte_1, char_lte_2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

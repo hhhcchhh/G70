@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_in_status_title_bar"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/iv_cell_1_nr"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cell_2_nr"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_cell_1_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            style="@style/TextUnderImageStyle"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cell_1_nr"
+            app:layout_constraintStart_toStartOf="@+id/iv_cell_1_nr"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cell_1_nr"/>
+
+        <ImageView
+            android:id="@+id/iv_cell_2_nr"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cell_1_lte"
+            app:layout_constraintStart_toEndOf="@+id/iv_cell_1_nr"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_cell_2_nr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            style="@style/TextUnderImageStyle"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cell_2_nr"
+            app:layout_constraintStart_toStartOf="@+id/iv_cell_2_nr"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cell_2_nr"/>
+
+        <ImageView
+            android:id="@+id/iv_cell_1_lte"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cell_2_lte"
+            app:layout_constraintStart_toEndOf="@+id/iv_cell_2_nr"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_cell_1_lte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            style="@style/TextUnderImageStyle"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cell_1_lte"
+            app:layout_constraintStart_toStartOf="@+id/iv_cell_1_lte"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cell_1_lte"/>
+
+        <ImageView
+            android:id="@+id/iv_cell_2_lte"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_cell_1_lte"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tv_cell_2_lte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            style="@style/TextUnderImageStyle"
+            app:layout_constraintEnd_toEndOf="@+id/iv_cell_2_lte"
+            app:layout_constraintStart_toStartOf="@+id/iv_cell_2_lte"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cell_2_lte"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_f8f8f8"
+        app:layout_constraintTop_toBottomOf="@+id/cl_title"
+        app:layout_constraintBottom_toTopOf="@+id/tab_layout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/main_color"
+        app:tabTextAppearance="@style/tabLayout_bottomStyle"
+        app:tabTextColor="@color/color_1c1c1c" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
