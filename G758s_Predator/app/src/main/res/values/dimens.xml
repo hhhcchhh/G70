@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="bs_app_margin">30dp</dimen>
+    <dimen name="bs_app_main_textsize">18sp</dimen>
+    <dimen name="bs_app_sub_textsize">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="bg_neiber_width">542px</dimen>
+    <dimen name="bg_neiber_height">598px</dimen>
+    <dimen name="toggleButton_width">180px</dimen>
+    <dimen name="toggleButton_space">0dp</dimen>
+    <dimen name="tab_layout_size">15sp</dimen>
+
+    <dimen name="drive_space">1dp</dimen>
+    <dimen name="drive_text_padding">10dp</dimen>
+    <dimen name="ed_wifi_mac_margin">3dp</dimen>
+
+</resources>

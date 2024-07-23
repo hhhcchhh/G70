@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/arfcn_list"
+        android:textColor="@color/title_text"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EDE5E5"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/arfcn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="arfcn"
+            android:textColor="@color/title_loc_text"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/freqCarrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:gravity="center"
+            android:text="ul_arfcn"
+            android:textColor="@color/title_loc_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time_offset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:gravity="center"
+            android:text="time_offset"
+            android:textColor="@color/title_loc_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/pa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="pa"
+            android:textColor="@color/title_loc_text"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/pk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="pk"
+            android:textColor="@color/title_loc_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="false" />
+</LinearLayout>

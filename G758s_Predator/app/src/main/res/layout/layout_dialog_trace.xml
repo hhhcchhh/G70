@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/trace_cfg"
+        android:textColor="@color/title_text"
+        android:textSize="20sp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        >
+        <RadioButton
+            android:id="@+id/rb_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:text="@string/rb_cell_0"
+            android:textColor="@color/radiobutton_tvcolor"
+            android:checked="true"
+            android:layout_marginHorizontal="4dp"
+            android:button="@null"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_cell_1"
+            app:layout_constraintStart_toEndOf="@id/rb_first"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/radiobutton_tvcolor"
+            android:checked="false"
+            android:button="@null"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_cell_2"
+            app:layout_constraintStart_toEndOf="@id/rb_first"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/radiobutton_tvcolor"
+            android:checked="false"
+            android:button="@null"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rb_cell_3"
+            app:layout_constraintStart_toEndOf="@id/rb_first"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/radiobutton_tvcolor"
+            android:checked="false"
+            android:button="@null"
+            android:textSize="16sp" />
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/config"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/cell_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_arfcn"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_arfcn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分裂频点："
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_split_arfcn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_pci"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_pci"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/main_text_color"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="IMSI"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_imsi"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/main_text_color" />
+                <Button
+                    android:id="@+id/btn_imsi_add"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_add" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ue_max_power"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+                <Spinner
+                    android:id="@+id/sp_maxpwr_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cell_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_arfcn"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_arfcn_second"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分裂频点："
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_split_arfcn_second"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_pci"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_pci_second"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/main_text_color"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="IMSI"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_imsi_second"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/main_text_color" />
+                <Button
+                    android:id="@+id/btn_imsi_add_second"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_add" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ue_max_power"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+                <Spinner
+                    android:id="@+id/sp_maxpwr_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cell_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_arfcn"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_arfcn_third"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分裂频点："
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_split_arfcn_third"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_pci"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_pci_third"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/main_text_color"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="IMSI"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_imsi_third"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/main_text_color" />
+                <Button
+                    android:id="@+id/btn_imsi_add_third"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_add" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ue_max_power"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+                <Spinner
+                    android:id="@+id/sp_maxpwr_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cell_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_arfcn"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_arfcn_fourth"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分裂频点："
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_split_arfcn_fourth"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textColor="@color/main_text_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ed_pci"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_pci_fourth"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/main_text_color"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="IMSI"
+                    android:textColor="@color/title_bar"
+                    android:textSize="14sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_imsi_fourth"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/main_text_color" />
+                <Button
+                    android:id="@+id/btn_imsi_add_fourth"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_add" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ue_max_power"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/sp_maxpwr_fourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/config"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dp"
+        android:background="@color/line_color" />
+    <TextView
+        android:id="@+id/tv_black_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/config"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/black_list"
+        android:textColor="@color/main_text_color"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_black_list"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dp"
+        android:background="@color/line_color" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bl_imsi_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_black_list"
+        android:divider="#00000000"
+        android:layout_marginTop="10dp"
+        android:minHeight="50dp"
+        android:maxHeight="100dp"
+        android:dividerHeight="0dip"
+        android:drawSelectorOnTop="false" />
+    <LinearLayout
+        android:id="@+id/ll_arfcn_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bl_imsi_list"
+        android:orientation="vertical">
+        <include layout="@layout/list_arfcn_title" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/arfcn_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/line_color"
+            android:drawSelectorOnTop="false" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:baselineAligned="false"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bgl_big"
+            android:text="@string/confirm"
+            android:textColor="@color/btn_text"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:layout_marginStart="20dp"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bgl_big"
+            android:text="@string/cancel"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:textColor="@color/btn_text"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

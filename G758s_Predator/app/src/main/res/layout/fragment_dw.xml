@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#C1EBF4"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/title_bar"
+            android:src="@mipmap/icon_temperaturel"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:text="00.00"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/iv_temp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.simdo.g758s_predator.DrawBatteryView
+            android:id="@+id/battery_view"
+            android:layout_width="24dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_temp" />
+
+        <TextView
+            android:id="@+id/battery"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_333333"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/battery_view"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_trace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_background_main"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/trace"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <Button
+            android:id="@+id/btn_arfcn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_background_main"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/freq_scan"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_trace"  />
+        <Button
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_background_main"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:text="基带设置"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_arfcn"  />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下单兵"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/switch_pef_pwr"
+            app:layout_constraintTop_toTopOf="@+id/switch_pef_pwr"
+            app:layout_constraintBottom_toBottomOf="@+id/switch_pef_pwr"/>
+
+        <Switch
+            android:id="@+id/switch_pef_pwr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_setting"  />
+        <LinearLayout
+            android:id="@+id/value"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/battery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_trace"
+            >
+
+            <TextView
+                android:id="@+id/tv_value_first"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/blue"
+                app:layout_constraintTop_toBottomOf="@+id/battery"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_value_second"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/orange"
+                app:layout_constraintTop_toBottomOf="@+id/battery"
+                app:layout_constraintStart_toEndOf="@+id/tv_value_first"
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/tv_value_third"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/dkgray"
+                app:layout_constraintTop_toBottomOf="@+id/battery"
+                app:layout_constraintStart_toEndOf="@+id/tv_value_second"
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/tv_value_fourth"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/magenta"
+                app:layout_constraintTop_toBottomOf="@+id/battery"
+                app:layout_constraintStart_toEndOf="@+id/tv_value_third"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value"
+            android:text="@string/cell_1"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/imsi_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/title_first"
+            app:layout_constraintTop_toBottomOf="@+id/value"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/arfcn_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imsi_first"
+            app:layout_constraintTop_toBottomOf="@+id/value"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/pci_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arfcn_first"
+            app:layout_constraintTop_toBottomOf="@+id/value"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/title_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imsi_first"
+            android:text="@string/cell_2"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/imsi_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/title_second"
+            app:layout_constraintTop_toBottomOf="@+id/imsi_first"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/arfcn_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imsi_second"
+            app:layout_constraintTop_toBottomOf="@+id/imsi_first"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/pci_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arfcn_second"
+            app:layout_constraintTop_toBottomOf="@+id/imsi_first"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/title_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_second"
+            android:text="@string/cell_3"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/imsi_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/title_first"
+            app:layout_constraintTop_toBottomOf="@+id/title_second"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/arfcn_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imsi_third"
+            app:layout_constraintTop_toBottomOf="@+id/title_second"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/pci_third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arfcn_third"
+            app:layout_constraintTop_toBottomOf="@+id/title_second"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/title_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_third"
+            android:text="@string/cell_4"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/imsi_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/title_first"
+            app:layout_constraintTop_toBottomOf="@+id/title_third"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/arfcn_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/imsi_fourth"
+            app:layout_constraintTop_toBottomOf="@+id/title_third"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/pci_fourth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/arfcn_fourth"
+            app:layout_constraintTop_toBottomOf="@+id/title_third"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp" />
+        <Button
+            android:id="@+id/btn_arfcn_4g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/btn_background_main"
+            app:layout_constraintTop_toBottomOf="@id/btn_arfcn"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            android:text="@string/freq_scan_4g"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_trace"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background_main"
+            app:layout_constraintEnd_toStartOf="@id/btn_arfcn"
+            android:layout_marginEnd="10dp"
+            android:text="工作状态"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imsi_fourth"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textSize="14sp"
+                android:textColor="@color/color_333333"
+                android:textStyle="bold"
+                android:text="@string/gps_state" />
+
+            <TextView
+                android:id="@+id/tv_gps"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textSize="14sp"
+                android:textColor="#FD554E"
+                tools:text="同步" />
+
+            <TextView
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textSize="14sp"
+                android:textColor="@color/color_333333"
+                android:text="@string/air_state"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_air_sync"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textSize="14sp"
+                android:textColor="#FD554E"
+                tools:text="同步" />
+
+            <TextView
+                android:id="@+id/tv_air_sync1"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:textSize="14sp"
+                android:textColor="#FD554E"
+                tools:text="同步" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/device_name"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_333333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sync" />
+        <TextView
+            android:id="@+id/device_id"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/sync" />
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_ip"
+            android:textColor="@color/color_333333"
+            app:layout_constraintStart_toEndOf="@+id/device_id"
+            app:layout_constraintTop_toBottomOf="@+id/sync" />
+        <TextView
+            android:id="@+id/ip"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/tv_ip"
+            app:layout_constraintTop_toBottomOf="@+id/sync" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/state_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/state"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/state_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@id/tv_state"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabIndicatorColor="#3576EC"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            android:layout_gravity="center_horizontal"
+            app:tabTextAppearance="@style/MyTabLayout"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/gray"
+            android:orientation="horizontal">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/catch_list"
+                android:id="@+id/tab_catch" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/bar_chart"
+                android:id="@+id/bar_chart" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/freq_scan_list"
+                android:id="@+id/freq_scan_list" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:id="@+id/catch_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_list_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_loc_bar"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/imsi"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/arfcn"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/pci"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/title_f_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="F-Time"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:singleLine="true"
+                    android:text="L-Time"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="14sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imsi_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chart_layout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="#3576EC"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="2dp"
+                app:tabTextAppearance="@style/MyTabLayout"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/gray"
+                android:orientation="horizontal">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_0"
+                    android:id="@+id/tab_cell_0"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_1"
+                    android:id="@+id/tab_cell_1"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_2"
+                    android:id="@+id/tab_cell_3"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/rb_cell_3"
+                    android:id="@+id/tab_cell_4"
+                    />
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart0"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:layout_height="match_parent"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart1"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:layout_height="match_parent"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:layout_height="match_parent"/>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/freq_scan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/list_arfcn_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/arfcn_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:descendantFocusability="blocksDescendants"
+                android:drawSelectorOnTop="false" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

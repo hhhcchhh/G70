@@ -1,0 +1,225 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_bar"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="扫频设置"
+            android:textColor="@color/title_text"
+            android:textSize="20sp">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5G频段"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+                <CheckBox
+                    android:id="@+id/n1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N1  "
+                    android:checked="false"
+                    android:layout_marginTop="10dp"/>
+                <CheckBox
+                    android:id="@+id/n28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N28"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/n41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N41"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/n78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N78"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/n79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N79"
+                    android:checked="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4G频段"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"/>
+                <CheckBox
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B1  "
+                    android:checked="false"
+                    android:layout_marginTop="10dp"/>
+                <CheckBox
+                    android:id="@+id/b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B3  "
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B5  "
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B8  "
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B34"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B39"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B40"
+                    android:checked="false"/>
+                <CheckBox
+                    android:id="@+id/b41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B41"
+                    android:checked="false"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/rg_save_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/scan_gps"
+                android:textColor="@color/main_text_color" />
+
+            <RadioButton
+                android:id="@+id/rb_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/scan_air"
+                android:visibility="visible"
+                android:textColor="@color/main_text_color" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/file_name"
+                android:textColor="@color/main_text_color"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ed_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_edittext"
+                android:inputType="text"
+                android:maxLength="11"
+                android:textColor="@color/main_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_margin="20dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bgl"
+                android:text="@string/confirm"
+                android:textColor="@color/btn_text"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bgl"
+                android:text="@string/cancel"
+                android:textColor="@color/btn_text"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
