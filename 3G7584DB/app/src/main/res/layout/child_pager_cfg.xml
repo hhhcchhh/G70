@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trace_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/cl_cfg_trace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/corner15_ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            tools:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_cfg_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="3dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/iv_operator_yiguang"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@mipmap/icon_yiguang"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_operator_liandian"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@mipmap/icon_liandian_notcheck"
+                    app:layout_constraintStart_toEndOf="@+id/iv_operator_yiguang"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/iv_black_list"
+                    android:layout_width="85dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@mipmap/icon_blacklist2_n"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsv_test"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/cl_yiguang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tint"
+                        style="@style/TextLeftStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="2dp"
+                        android:text="移广：N28/N41/N79 双B3/B8/B34/B39/双B40/B41 "
+                        android:textColor="@color/main_text_color2"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_tint">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            style="@style/TextLeftStyle"
+                            android:layout_width="37dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="15dp"
+                            android:text="@string/IMSI"
+                            android:textColor="@color/main_text_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/actv_imsi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:backgroundTint="#666666"
+                            android:clickable="true"
+                            android:enabled="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:longClickable="true"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                            android:textColor="@color/main_text_color3"
+                            android:textCursorDrawable="@drawable/edit_cursor_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView"
+                            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <include layout="@layout/test_11imsi_layout" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView20"
+                            style="@style/TextLeftStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/arfcn"
+                            android:textColor="@color/main_text_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/rv_arfcn_1" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_arfcn_1"
+                            android:layout_width="0dp"
+                            android:layout_height="280dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:maxHeight="150dp"
+                            android:minHeight="30dp"
+                            android:scrollbars="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/btn_add_yiguang"
+                            app:layout_constraintStart_toEndOf="@+id/textView20"
+                            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                        <ImageView
+                            android:id="@+id/btn_add_yiguang"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginTop="-3dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@mipmap/icon_increase_n"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/rv_arfcn_1"
+                            app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+                        <TextView
+                            android:id="@+id/tv_import_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="导入"
+                            android:textSize="16sp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@+id/btn_add_yiguang"
+                            app:layout_constraintStart_toStartOf="@+id/btn_add_yiguang"
+                            app:layout_constraintTop_toBottomOf="@+id/btn_add_yiguang" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/cl_liandian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_cfg_function">
+
+
+                <TextView
+                    android:id="@+id/tv_tint_liandian"
+                    style="@style/TextLeftStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="2dp"
+                    android:text="联电：N1/N3/双N78 B1/双B3/B5/B8 "
+                    android:textColor="@color/main_text_color2"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView_liandian"
+                        style="@style/TextLeftStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/IMSI"
+                        android:textColor="@color/main_text_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_imsi_liandian"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:backgroundTint="#666666"
+                        android:clickable="true"
+                        android:enabled="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:longClickable="true"
+                        android:maxLength="15"
+                        android:singleLine="true"
+                        android:textColor="@color/main_text_color3"
+                        android:textCursorDrawable="@drawable/edit_cursor_color"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView_liandian"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView_liandian"
+                        app:layout_constraintTop_toTopOf="@+id/textView_liandian" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView20_liandian"
+                        style="@style/TextLeftStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/arfcn"
+                        android:textColor="@color/main_text_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/rv_arfcn_1_liandian" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_arfcn_1_liandian"
+                        android:layout_width="0dp"
+                        android:layout_height="280dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:maxHeight="150dp"
+                        android:minHeight="30dp"
+                        android:scrollbars="vertical"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_add_liandian"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@+id/textView20_liandian"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/btn_add_liandian"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@mipmap/icon_increase_n"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView20_liandian"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rv_arfcn_1_liandian"
+                        app:layout_constraintTop_toTopOf="@+id/textView20_liandian" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/ll_auto_trace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/corner15_ffffff"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:layout_editor_absoluteX="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="请输入自动定位的imsi"
+                        android:textColor="@color/color_1a1a1a"
+                        android:textSize="20sp" />
+                    <ImageView
+                        android:id="@+id/iv_black_list_auto"
+                        android:layout_width="85dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@mipmap/icon_blacklist2_n"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_auto_imsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_edittext"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/color_1a1a1a"
+                    android:textCursorDrawable="@drawable/edit_cursor_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:text=" imsi为15位数字，否则无法自动定位！"
+                    app:drawableStartCompat="@mipmap/iv_auto_bottom_hint" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_ok"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_cancel_2"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/color_1c1c1c"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_instance"
+            android:layout_width="85dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@mipmap/icon_distance2_n"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/sw_auto_trace"
+            app:layout_constraintEnd_toEndOf="@+id/sw_auto_trace"
+            app:layout_constraintStart_toStartOf="@+id/sw_auto_trace"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_do_btn"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_bg_ok"
+            android:gravity="center"
+            android:minWidth="200dp"
+            android:text="@string/open"
+            android:textColor="@color/button_text_color_confirm"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_auto_trace" />
+
+        <Switch
+            android:id="@+id/sw_auto_trace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:switchMinWidth="99dp"
+            android:layout_marginStart="57dp"
+            android:thumb="@drawable/switch_thumb3"
+            android:track="@drawable/switch_track2"
+            app:layout_constraintStart_toStartOf="@+id/tv_do_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/force_catch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="强上号"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch_force_catch"
+            app:layout_constraintStart_toEndOf="@+id/sw_auto_trace"
+            app:layout_constraintTop_toTopOf="@+id/switch_force_catch" />
+
+        <Switch
+            android:id="@+id/switch_force_catch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="@+id/sw_auto_trace"
+
+            app:layout_constraintStart_toEndOf="@+id/force_catch"
+            app:layout_constraintTop_toTopOf="@+id/sw_auto_trace"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/tv_switch_text_cfg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="2dp"
+            android:text="专业"
+            android:textColor="@color/button_bg_color_confirm"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sw_auto_trace"
+            app:layout_constraintEnd_toEndOf="@+id/sw_auto_trace"
+            app:layout_constraintStart_toStartOf="@id/sw_auto_trace"
+            app:layout_constraintTop_toTopOf="@+id/sw_auto_trace" />
+
+        <TextView
+            android:id="@+id/tv_switch_text_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2dp"
+            android:text="自动"
+            android:textColor="@color/switch_close_color2"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/sw_auto_trace"
+            app:layout_constraintEnd_toEndOf="@+id/sw_auto_trace"
+            app:layout_constraintStart_toStartOf="@id/sw_auto_trace"
+            app:layout_constraintTop_toTopOf="@+id/sw_auto_trace" />
+
+        <TextView
+            android:id="@+id/tv_test_start_tint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试模式下点击开启按钮不限制运营商"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tv_do_btn"
+            app:layout_constraintStart_toStartOf="@+id/tv_do_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

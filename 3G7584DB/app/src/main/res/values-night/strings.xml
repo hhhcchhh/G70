@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="special_models_tip">高通8Genx及华为相关</string>
+    <string name="special_models">特殊机型策略</string>
+</resources>

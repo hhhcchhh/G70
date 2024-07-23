@@ -1,0 +1,38 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.G73CS" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryVariant">@color/main_bg_color</item>
+        <item name="colorOnPrimary">@color/main_bg_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/main_bg_color</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="21">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/login_bg</item>
+        <!--        水滴颜色-->
+        <item name="colorControlActivated">@color/main_control_activated_color</item>
+    </style>
+
+
+    <style name="Theme.G73CS.dialog" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryVariant">@color/dialog_title_bg_color</item>
+        <item name="colorOnPrimary">@color/main_bg_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/main_bg_color</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="21">@color/dialog_status_bar_color</item>
+        <item name="android:navigationBarColor">@color/dialog_navigation_bar_color</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/login_bg</item>
+    </style>
+
+</resources>
