@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:text="序号"
+        android:layout_width="wrap_content"
+        style="@style/rightTextStyle" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/under_line"
+        android:paddingVertical="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_gps"
+            android:layout_weight="0.25"
+            android:text="GPS"
+            style="@style/rightTextStyle" />
+        <TextView
+            android:id="@+id/tv_air"
+            android:layout_weight="0.25"
+            android:text="空口状态"
+            style="@style/rightTextStyle" />
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_weight="0.25"
+            android:text="温度"
+            style="@style/rightTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_device_state"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/rightTextStyle"
+            android:text="设备状态"
+            android:gravity="start"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+</LinearLayout>

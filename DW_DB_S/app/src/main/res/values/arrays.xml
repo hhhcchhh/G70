@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bandwidth_type">
+        <item>5M</item>
+        <item>10M</item>
+    </string-array>
+    <string-array name="smooth_type">
+        <item>平均</item>
+        <item>中值</item>
+        <item>iir</item>
+    </string-array>
+    <string-array name="gpio">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

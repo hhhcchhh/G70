@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="#e6e6e6"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_tac"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:text="@string/tv_tac"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_eci"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:text="@string/tv_nci"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_arfcn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:text="@string/tv_arfcn"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_pci"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/tv_pci"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_rx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/tv_rx"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/title_act"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="@string/tv_act"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
